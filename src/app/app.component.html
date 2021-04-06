@@ -1,0 +1,14 @@
+<form [formGroup]="form" class="y-vertical-flex">
+    <input formControlName="startDte" #startDateMask
+        yn-mask-date="dd/mm/yyyy" [yn-mask-settings]="ynDateSettings"
+        class="form-control" type="text"
+        maxlength="10" 
+        placeholder="dd/mm/yyyy" />
+    <input formControlName="endDte" #endDateMask
+        yn-mask-date="dd/mm/yyyy" [yn-mask-settings]="ynDateSettings"
+        class="form-control" type="text"
+        maxlength="10"
+        placeholder="dd/mm/yyyy" />   
+    <button (click)="disableAll()">Disable</button>
+    <button (click)="enableAll()">Enable</button>
+</form>
